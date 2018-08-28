@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "92974613551",
+    "firebase_url": "https://dietbase-83c8f.firebaseio.com",
+    "project_id": "dietbase-83c8f",
+    "storage_bucket": "dietbase-83c8f.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:92974613551:android:655e0479af27825f",
+        "android_client_info": {
+          "package_name": "com.example.dwistari.calories"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "92974613551-l2npm965o76adid1p1m6otufcasqart6.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.dwistari.calories",
+            "certificate_hash": "7f8c7c58b50bbf832ebaffd3696729ba2823c4d7"
+          }
+        },
+        {
+          "client_id": "92974613551-16ljar5t244ol6apntq0thv54eshafr7.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBA_qP8EikJpmKXQuUSHI_KVO5GGq2Zt4Y"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "92974613551-16ljar5t244ol6apntq0thv54eshafr7.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
