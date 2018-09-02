@@ -37,12 +37,12 @@ public class AdapterProfile extends RecyclerView.Adapter<AdapterProfile.ViewHold
         ViewHolder(View ProfileView) {
             super(ProfileView);
             //Menginisialisasi View-View yang terpasang pada layout RecyclerView kita
-            Nama = ProfileView.findViewById(R.id.nama);
-            Kelamin = ProfileView.findViewById(R.id.kelamin);
-            Umur = ProfileView.findViewById(R.id.umur);
-            Berat = ProfileView.findViewById(R.id.berat);
-            Tinggi = ProfileView.findViewById(R.id.tinggi);
-            Aktivitas = ProfileView.findViewById(R.id.aktivitas);
+            Nama =  (TextView) ProfileView.findViewById(R.id.tvnama);
+            Kelamin = (TextView) ProfileView.findViewById(R.id.tvkelamin);
+            Umur = (TextView) ProfileView.findViewById(R.id.tvumur);
+            Berat =(TextView) ProfileView.findViewById(R.id.tvberat);
+            Tinggi = (TextView) ProfileView.findViewById(R.id.tvtinggi);
+            Aktivitas = (TextView) ProfileView.findViewById(R.id.tvaktivitas);
         }
     }
 
@@ -50,7 +50,8 @@ public class AdapterProfile extends RecyclerView.Adapter<AdapterProfile.ViewHold
     public ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         //Membuat View untuk Menyiapkan dan Memasang Layout yang Akan digunakan pada RecyclerView
         View V = LayoutInflater.from(parent.getContext()).inflate(R.layout.result, parent, false);
-        return new ViewHolder(V);
+        ViewHolder vh = new ViewHolder(V);
+        return vh;
     }
 
     @SuppressLint("SetTextI18n")
@@ -83,6 +84,12 @@ public class AdapterProfile extends RecyclerView.Adapter<AdapterProfile.ViewHold
                 return true;
             }
         });
+        holder.Nama.setText(Nama);
+        holder.Kelamin.setText(Kelamin);
+        holder.Umur.setText(Umur);
+        holder.Berat.setText(Berat);
+        holder.Tinggi.setText(Tinggi);
+        holder.Aktivitas.setText(Aktivitas);
     }
 
     @Override

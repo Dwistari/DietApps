@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "E:\\SKRIPSI\\Aplikasi\\calories\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-port\\values-port.xml",
+            "outputFile": "E:\\SKRIPSI\\DietApps\\calories\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-port\\values-port.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\Dwistari\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.1.aar\\d473fb19ffb2d9d5a40f7144589aed89\\res\\values-port\\values-port.xml",
+                    "source": "C:\\Users\\Dwistari\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.1.aar\\43c01d0dd8c6a1da3815146ad2f72577\\res\\values-port\\values-port.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",

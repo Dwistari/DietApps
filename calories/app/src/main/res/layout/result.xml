@@ -24,7 +24,7 @@
 
 
         <TextView
-            android:id="@+id/nama"
+            android:id="@+id/tvnama"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="4dp"
@@ -33,32 +33,39 @@
             android:textStyle="bold"/>
 
         <TextView
-            android:id="@+id/kelamin"
+            android:id="@+id/tvkelamin"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="4dp"
             android:text="Jenis Kelamin:" />
 
         <TextView
-            android:id="@+id/umur"
+            android:id="@+id/tvumur"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="4dp"
             android:text="Umur :" />
 
         <TextView
-            android:id="@+id/berat"
+            android:id="@+id/tvberat"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="4dp"
             android:text="Berat Badan :" />
 
         <TextView
-            android:id="@+id/tinggi"
+            android:id="@+id/tvtinggi"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="4dp"
             android:text="Tinggi Badan:" />
+
+        <TextView
+            android:id="@+id/tvaktivitas"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:text="Aktivitas :" />
 
     </LinearLayout>
 

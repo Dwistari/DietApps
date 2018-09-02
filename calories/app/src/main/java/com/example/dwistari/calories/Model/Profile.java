@@ -1,39 +1,34 @@
 package com.example.dwistari.calories.Model;
 
-    import com.google.gson.annotations.SerializedName;
+import com.google.firebase.database.IgnoreExtraProperties;
 
-    /**
+import java.io.Serializable;
+
+/**
      * Created by root on 2/3/17.
      */
-
-    public class Profile {
-        @SerializedName("nama")
+@IgnoreExtraProperties
+    public class Profile implements Serializable {
+     // @SerializedName("nama")
         private String nama;
-        @SerializedName("jenis_kelamin")
+       // @SerializedName("jenis_kelamin")
         private String kelamin;
-        @SerializedName("umur")
+       // @SerializedName("umur")
         private String umur;
-        @SerializedName("berat_badan")
+       // @SerializedName("berat_badan")
         private String berat;
-        @SerializedName("tinggi_badan")
+       // @SerializedName("tinggi_badan")
         private String tinggi;
-        @SerializedName("aktivitas")
+       // @SerializedName("aktivitas")
         private String aktivitas;
 
-  //      public Profile(String id, String nama, String kelamin, int umur, double berat, double tinggi, String aktivitas){}
 
+        public Profile() {
 
-        public Profile(String nama, String kelamin, String umur, String tinggi, String berat, String aktivitas) {
-            this.nama = nama;
-            this.kelamin = kelamin;
-            this.umur = umur;
-            this.berat=  berat;
-            this.tinggi = tinggi;
-            this.aktivitas=aktivitas;
         }
 
-
         public String getNama() {
+
             return nama;
         }
 
@@ -93,6 +88,25 @@ package com.example.dwistari.calories.Model;
 
             this.aktivitas = aktivitas;
         }
+    @Override
+    public String toString() {
+        return " "+nama+"\n" +
+                " "+kelamin +"\n" +
+                " "+umur +"\n" +
+                " "+berat +"\n" +
+                " "+tinggi+"\n" +
+                " "+aktivitas;
+    }
+
+    public Profile(String nm, String klmn, String umr, String brt, String tgg, String aktv){
+        nama = nm;
+        kelamin = klmn;
+        umur = umr;
+        berat = brt;
+        tinggi = tgg;
+        aktivitas = aktv;
+    }
+
 
 
     }

@@ -1,3 +1,12 @@
 <resources>
     <string name="app_name">calories</string>
+    <string name="masukan_mana">Masukan Nama</string>
+    <string name="kelamin">Jenis Kelamin</string>
+    <string name="umur">Umur</string>
+    <string name="berat">Berat badan</string>
+    <string name="tinggi">Tinggi Badan</string>
+    <string name="aktivitas">Jenis Aktivitas</string>
+    <string name="result">Hasil</string>
+
+
 </resources>

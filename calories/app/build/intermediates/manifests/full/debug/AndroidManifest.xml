@@ -37,8 +37,8 @@
             </intent-filter>
         </activity>
         <activity android:name="com.example.dwistari.calories.CaloresiAct" />
-        <activity android:name="com.example.dwistari.calories.ResultAct" />
-        <activity android:name="com.example.dwistari.calories.ProfileList" />
+        <!-- <activity android:name=".ResultAct"></activity> -->
+        <!-- <activity android:name=".ProfileList"></activity> -->
 
         <service android:name="com.google.firebase.components.ComponentDiscoveryService" >
             <meta-data

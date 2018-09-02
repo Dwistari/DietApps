@@ -29,7 +29,7 @@ public class Menu extends AppCompatActivity {
         btViewDB.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(ResultAct.getActIntent(Menu.this));
+//                startActivity(ProfileList.getActIntent(Menu.this));
             }
         });
     }

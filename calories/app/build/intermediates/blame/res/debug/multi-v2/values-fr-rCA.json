@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "E:\\SKRIPSI\\Aplikasi\\calories\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-fr-rCA\\values-fr-rCA.xml",
+            "outputFile": "E:\\SKRIPSI\\DietApps\\calories\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-fr-rCA\\values-fr-rCA.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\Dwistari\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.1.aar\\d473fb19ffb2d9d5a40f7144589aed89\\res\\values-fr-rCA\\values-fr-rCA.xml",
+                    "source": "C:\\Users\\Dwistari\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.1.aar\\43c01d0dd8c6a1da3815146ad2f72577\\res\\values-fr-rCA\\values-fr-rCA.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19",
                         "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
@@ -21,24 +21,7 @@
                     }
                 },
                 {
-                    "source": "C:\\Users\\Dwistari\\.gradle\\caches\\transforms-1\\files-1.1\\play-services-basement-15.0.1.aar\\9c4db5750382736fc1100116ec79d367\\res\\values-fr-rCA\\values.xml",
-                    "from": {
-                        "startLines": "4",
-                        "startColumns": "0",
-                        "startOffsets": "251",
-                        "endColumns": "219",
-                        "endOffsets": "470"
-                    },
-                    "to": {
-                        "startLines": "27",
-                        "startColumns": "4",
-                        "startOffsets": "3158",
-                        "endColumns": "219",
-                        "endOffsets": "3373"
-                    }
-                },
-                {
-                    "source": "C:\\Users\\Dwistari\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-27.1.1.aar\\d15efb00443fd8eb2df4d18d02fd99d5\\res\\values-fr-rCA\\values-fr-rCA.xml",
+                    "source": "C:\\Users\\Dwistari\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-27.1.1.aar\\05fb7fcb5505be74baddd69a36bb6534\\res\\values-fr-rCA\\values-fr-rCA.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",
@@ -55,7 +38,7 @@
                     }
                 },
                 {
-                    "source": "C:\\Users\\Dwistari\\.gradle\\caches\\transforms-1\\files-1.1\\play-services-base-15.0.1.aar\\5459f1a826aeb14706070f404d24032a\\res\\values-fr-rCA\\values.xml",
+                    "source": "C:\\Users\\Dwistari\\.gradle\\caches\\transforms-1\\files-1.1\\play-services-base-15.0.1.aar\\ed17dbd3be2167a68c8a3d14943d4060\\res\\values-fr-rCA\\values.xml",
                     "from": {
                         "startLines": "4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20",
                         "startColumns": "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0",
@@ -69,6 +52,23 @@
                         "startOffsets": "1937,2045,2257,2389,2500,2730,2865,3016,3378,3632,3746,3962,4100,4319,4528,4631,4725",
                         "endColumns": "107,211,131,110,229,134,150,141,253,113,215,137,218,208,102,93,112",
                         "endOffsets": "2040,2252,2384,2495,2725,2860,3011,3153,3627,3741,3957,4095,4314,4523,4626,4720,4833"
+                    }
+                },
+                {
+                    "source": "C:\\Users\\Dwistari\\.gradle\\caches\\transforms-1\\files-1.1\\play-services-basement-15.0.1.aar\\53fdd581cfb844194aea5a1c8577480d\\res\\values-fr-rCA\\values.xml",
+                    "from": {
+                        "startLines": "4",
+                        "startColumns": "0",
+                        "startOffsets": "251",
+                        "endColumns": "219",
+                        "endOffsets": "470"
+                    },
+                    "to": {
+                        "startLines": "27",
+                        "startColumns": "4",
+                        "startOffsets": "3158",
+                        "endColumns": "219",
+                        "endOffsets": "3373"
                     }
                 }
             ]

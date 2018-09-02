@@ -24,15 +24,15 @@
             android:layout_height="60dp"
             android:text="Input Data"
             android:textAlignment="center"
-            android:textSize="24dp"
+            android:textSize="24sp"
             android:textStyle="bold" />
 
         <EditText
-            android:id="@+id/nama"
+            android:id="@+id/tvnama"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:ems="10"
-            android:hint="Masukan nama"
+            android:text="@string/masukan_mana"
             android:inputType="textPersonName" />
 
         <EditText
@@ -40,14 +40,14 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:ems="10"
-            android:hint="Jenis kelamin" />
+            android:text="@string/kelamin" />
 
         <EditText
             android:id="@+id/umur"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:ems="10"
-            android:hint="Umur"
+            android:text="@string/umur"
             android:inputType="number" />
 
         <EditText
@@ -56,6 +56,7 @@
             android:layout_height="wrap_content"
             android:ems="10"
             android:hint="Berat badan"
+            android:text="@string/berat"
             android:inputType="number"/>
 
         <EditText
@@ -63,7 +64,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:ems="10"
-            android:hint="Tinggi badan"
+            android:text="@string/tinggi"
             android:inputType="number"/>
 
         <EditText
@@ -71,7 +72,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:ems="10"
-            android:hint="Aktivitas" />
+            android:text="@string/aktivitas" />
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -84,8 +85,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="Result" />
-             <!--android:onClick="saveProfile"-->
+                android:text="@string/result"
+             android:onClick="saveProfile"/>
 
 
 
