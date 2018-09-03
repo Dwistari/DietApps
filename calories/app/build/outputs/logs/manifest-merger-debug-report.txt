@@ -131,6 +131,10 @@ activity#com.example.dwistari.calories.CaloresiAct
 ADDED from E:\SKRIPSI\DietApps\calories\app\src\main\AndroidManifest.xml:24:9-58
 	android:name
 		ADDED from E:\SKRIPSI\DietApps\calories\app\src\main\AndroidManifest.xml:24:19-46
+activity#com.example.dwistari.calories.ProfileList
+ADDED from E:\SKRIPSI\DietApps\calories\app\src\main\AndroidManifest.xml:26:9-58
+	android:name
+		ADDED from E:\SKRIPSI\DietApps\calories\app\src\main\AndroidManifest.xml:26:19-46
 uses-sdk
 INJECTED from E:\SKRIPSI\DietApps\calories\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
 INJECTED from E:\SKRIPSI\DietApps\calories\app\src\main\AndroidManifest.xml

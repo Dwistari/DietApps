@@ -38,7 +38,7 @@
         </activity>
         <activity android:name="com.example.dwistari.calories.CaloresiAct" />
         <!-- <activity android:name=".ResultAct"></activity> -->
-        <!-- <activity android:name=".ProfileList"></activity> -->
+        <activity android:name="com.example.dwistari.calories.ProfileList" />
 
         <service android:name="com.google.firebase.components.ComponentDiscoveryService" >
             <meta-data

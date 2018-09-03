@@ -23,8 +23,13 @@ import java.io.Serializable;
         private String aktivitas;
 
 
-        public Profile() {
-
+        public Profile(String nm, String klmn, String umr, String brt, String tgg, String aktv) {
+            nama = nm;
+            kelamin = klmn;
+            umur = umr;
+            berat = brt;
+            tinggi = tgg;
+            aktivitas = aktv;
         }
 
         public String getNama() {
@@ -98,14 +103,7 @@ import java.io.Serializable;
                 " "+aktivitas;
     }
 
-    public Profile(String nm, String klmn, String umr, String brt, String tgg, String aktv){
-        nama = nm;
-        kelamin = klmn;
-        umur = umr;
-        berat = brt;
-        tinggi = tgg;
-        aktivitas = aktv;
-    }
+  //  public Profile(String nm, String klmn, String umr, String brt, String tgg, String aktv){
 
 
 

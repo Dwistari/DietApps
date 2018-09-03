@@ -61,10 +61,10 @@ public class CaloresiAct extends AppCompatActivity {
         @Override
         public void onClick(View view) {
             if (!isEmpty(etNama.getText().toString()) && !isEmpty(etKelamin.getText().toString()) && !isEmpty(etUmur.getText().toString())
-                    && !isEmpty(etBerat.getText().toString()) && !isEmpty(etTinggi.getText().toString())&& !isEmpty(etAktivitas.getText().toString()))
+                    && !isEmpty(etBerat.getText().toString()) && !isEmpty(etTinggi.getText().toString())&& !isEmpty(etAktivitas.getText().toString())) {
                 submitProfile(new Profile(etNama.getText().toString(), etKelamin.getText().toString(), etUmur.getText().toString(),
-                        etTinggi.getText().toString(), etAktivitas.getText().toString()));
-        else
+                        etBerat.getText().toString(),etTinggi.getText().toString(), etAktivitas.getText().toString()));
+            } else
                    Snackbar.make(findViewById(R.id.Result), "Data tidak boleh kosong!!", Snackbar.LENGTH_LONG).show();
 
                     InputMethodManager imm = (InputMethodManager)

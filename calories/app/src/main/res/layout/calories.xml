@@ -32,7 +32,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:ems="10"
-            android:text="@string/masukan_mana"
+            android:hint="@string/masukan_mana"
             android:inputType="textPersonName" />
 
         <EditText
@@ -40,14 +40,14 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:ems="10"
-            android:text="@string/kelamin" />
+            android:hint="@string/kelamin" />
 
         <EditText
             android:id="@+id/umur"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:ems="10"
-            android:text="@string/umur"
+            android:hint="@string/umur"
             android:inputType="number" />
 
         <EditText
@@ -55,8 +55,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:ems="10"
-            android:hint="Berat badan"
-            android:text="@string/berat"
+            android:hint="@string/berat"
             android:inputType="number"/>
 
         <EditText
@@ -64,7 +63,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:ems="10"
-            android:text="@string/tinggi"
+            android:hint="@string/tinggi"
             android:inputType="number"/>
 
         <EditText
@@ -72,7 +71,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:ems="10"
-            android:text="@string/aktivitas" />
+            android:hint="@string/aktivitas" />
 
         <LinearLayout
             android:layout_width="match_parent"
