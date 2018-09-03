@@ -22,7 +22,7 @@
         </activity>
 
         <activity android:name=".CaloresiAct"></activity>
-       <!--<activity android:name=".ResultAct"></activity>-->
+       <!--&lt;!&ndash;<activity android:name=".ResultAct"></activity>&ndash;&gt;-->
         <activity android:name=".ProfileList"></activity>
 
 

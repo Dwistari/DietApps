@@ -26,6 +26,7 @@ public class ProfileList extends AppCompatActivity {
     private RecyclerView.LayoutManager layoutManager;
     private ArrayList<Profile> dataProfile;
 
+
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -37,67 +38,69 @@ public class ProfileList extends AppCompatActivity {
         /**
          * Inisialisasi RecyclerView & komponennya
          */
-
-
         rvView = (RecyclerView) findViewById(R.id.datalist);
         rvView.setHasFixedSize(true);
         layoutManager = new LinearLayoutManager(this);
         rvView.setLayoutManager(layoutManager);
+
+        /**
+         * Inisialisasi adapter dan data barang dalam bentuk ArrayList
+         * dan mengeset Adapter ke dalam RecyclerView
+         */
+        dataProfile = new ArrayList<>();
+        adapter = new AdapterProfile(dataProfile, ProfileList.this);
         rvView.setAdapter(adapter);
-
-
 
         /**
          * Inisialisasi dan mengambil Firebase Database Reference
          */
         database = FirebaseDatabase.getInstance().getReference();
-
         /**
-         * Mengambil data barang dari Firebase Realtime DB
+         * Mengambil data profile dari Firebase Realtime DB
          */
-        database.child("barang").addValueEventListener(new ValueEventListener() {
+        database.child("Profile").addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {
-
-                /**
-                 * Saat ada data baru, masukkan datanya ke ArrayList
-                 */
-                dataProfile = new ArrayList<>();
-                for (DataSnapshot noteDataSnapshot : dataSnapshot.getChildren()) {
-                    /**
-                     * Mapping data pada DataSnapshot ke dalam object Barang
-                     * Dan juga menyimpan primary key pada object Barang
-                     * untuk keperluan Edit dan Delete data
-                     */
-                    Profile profile = noteDataSnapshot.getValue(Profile.class);
-                    profile.setNama(noteDataSnapshot.getKey());
-
-                    /**
-                     * Menambahkan object Barang yang sudah dimapping
-                     * ke dalam ArrayList
-                     */
-                    dataProfile.add(profile);
-                }
-
-                /**
-                 * Inisialisasi adapter dan data barang dalam bentuk ArrayList
-                 * dan mengeset Adapter ke dalam RecyclerView
-                 */
-                adapter = new AdapterProfile(dataProfile, ProfileList.this);
-                rvView.setAdapter(adapter);
+                Profile profile = dataSnapshot.getValue(Profile.class);
+                System.out.println(profile);
             }
 
-            @Override
-            public void onCancelled(DatabaseError databaseError) {
-                /**
-                 * Kode ini akan dipanggil ketika ada error dan
-                 * pengambilan data gagal dan memprint error nya
-                 * ke LogCat
-                 */
-                System.out.println(databaseError.getDetails()+" "+databaseError.getMessage());
-            }
-        });
+//                /**
+//                 * Saat ada data baru, masukkan datanya ke ArrayList
+//                 */
+//                for (DataSnapshot noteDataSnapshot : dataSnapshot.getChildren()) {
+//                    /**
+//                     * Mapping data pada DataSnapshot ke dalam object Barang
+//                     * Dan juga menyimpan primary key pada object Barang
+//                     * untuk keperluan Edit dan Delete data
+//                     */
+//                    Profile profile = noteDataSnapshot.getValue(Profile.class);
+//                    profile.setNama(noteDataSnapshot.getKey());
+//
+//                    /**
+//                     * Menambahkan object Barang yang sudah dimapping
+//                     * ke dalam ArrayList
+//                     */
+//                    dataProfile.add(profile);
+//                }
+
+
+//
+//            ArrayList profile = new ArrayList(); // nomor adalah variabel
+//            private void main(String[] args) {
+//                ArrayList profile = new ArrayList();
+//                int jumlah_data = 10;
+//                profile.add(jumlah_data);
+//            }
+
+
+        @Override
+        public void onCancelled(DatabaseError databaseError) {
+            System.out.println("The read failed: " + databaseError.getCode());
+        }
+    });
     }
+
 
     public static Intent getActIntent(Activity activity){
         return new Intent(activity, ProfileList.class);

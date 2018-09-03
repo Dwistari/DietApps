@@ -6,11 +6,10 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.LinearLayout;
 import android.widget.TextView;
 
-import com.example.dwistari.calories.R;
 import com.example.dwistari.calories.Model.Profile;
+import com.example.dwistari.calories.R;
 
 import java.util.ArrayList;
 
@@ -19,20 +18,23 @@ public class AdapterProfile extends RecyclerView.Adapter<AdapterProfile.ViewHold
 
 
     //Deklarasi Variable
-    private ArrayList<Profile> listProfile;
+    private ArrayList<Profile> dataProfile;
     private Context context;
 
     //Membuat Konstruktor, untuk menerima input dari Database
-    public AdapterProfile(ArrayList<Profile> listProfile, Context context) {
-        this.listProfile = listProfile;
-        this.context = context;
+    public AdapterProfile(ArrayList<Profile> profile, Context ctx) {
+        /**
+         * Inisiasi data dan variabel yang akan digunakan
+         */
+        dataProfile = profile;
+        context = ctx;
     }
 
     //ViewHolder Digunakan Untuk Menyimpan Referensi Dari View-View
     class ViewHolder extends RecyclerView.ViewHolder{
 
         private TextView Nama, Kelamin, Umur, Berat, Tinggi, Aktivitas;
-        private LinearLayout ListItem;
+
 
         ViewHolder(View ProfileView) {
             super(ProfileView);
@@ -49,8 +51,8 @@ public class AdapterProfile extends RecyclerView.Adapter<AdapterProfile.ViewHold
     @Override
     public ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         //Membuat View untuk Menyiapkan dan Memasang Layout yang Akan digunakan pada RecyclerView
-        View V = LayoutInflater.from(parent.getContext()).inflate(R.layout.result, parent, false);
-        ViewHolder vh = new ViewHolder(V);
+        View v = LayoutInflater.from(parent.getContext()).inflate(R.layout.result, parent, false);
+        ViewHolder vh = new ViewHolder(v);
         return vh;
     }
 
@@ -58,12 +60,12 @@ public class AdapterProfile extends RecyclerView.Adapter<AdapterProfile.ViewHold
     @Override
     public void onBindViewHolder(ViewHolder holder, final int position) {
         //Mengambil Nilai/Value yenag terdapat pada RecyclerView berdasarkan Posisi Tertentu
-        final String Nama = listProfile.get(position).getNama();
-        final String Kelamin = listProfile.get(position).getKelamin();
-        final String Umur = listProfile.get(position).getUmur();
-        final String Berat = listProfile.get(position).getBerat();
-        final String Tinggi = listProfile.get(position).getTinggi();
-        final String Aktivitas = listProfile.get(position).getAktivitas();
+        final String Nama = dataProfile.get(position).getNama();
+        final String Kelamin = dataProfile.get(position).getKelamin();
+        final String Umur = dataProfile.get(position).getUmur();
+        final String Berat = dataProfile.get(position).getBerat();
+        final String Tinggi = dataProfile.get(position).getTinggi();
+        final String Aktivitas = dataProfile.get(position).getAktivitas();
 
         //Memasukan Nilai/Value kedalam View (TextView)
         holder.Nama.setText("Nama: "+Nama);
@@ -73,8 +75,16 @@ public class AdapterProfile extends RecyclerView.Adapter<AdapterProfile.ViewHold
         holder.Tinggi.setText("Tinggi badan: "+Tinggi);
         holder.Aktivitas.setText("Aktivitas: "+Aktivitas);
 
+        holder.Nama.setOnClickListener(new View.OnClickListener() {
+        @Override
+        public void onClick(View v) {
+            /**
+             *  Kodingan untuk tutorial Selanjutnya :p Read detail data
+             */
+        }
+    });
 
-        holder.ListItem.setOnLongClickListener(new View.OnLongClickListener() {
+        holder.Nama.setOnLongClickListener(new View.OnLongClickListener() {
             @Override
             public boolean onLongClick(View v) {
                 /*
@@ -95,7 +105,7 @@ public class AdapterProfile extends RecyclerView.Adapter<AdapterProfile.ViewHold
     @Override
     public int getItemCount() {
         //Menghitung Ukuran/Jumlah Data Yang Akan Ditampilkan Pada RecyclerView
-        return listProfile.size();
+        return dataProfile.size();
     }
 
 }

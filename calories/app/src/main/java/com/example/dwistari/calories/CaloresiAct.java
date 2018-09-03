@@ -11,15 +11,12 @@ import android.view.View;
 import android.view.inputmethod.InputMethodManager;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.ListView;
 import android.widget.ProgressBar;
 
 import com.example.dwistari.calories.Model.Profile;
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
-
-import java.util.List;
 
 public class CaloresiAct extends AppCompatActivity {
 
@@ -31,8 +28,7 @@ public class CaloresiAct extends AppCompatActivity {
     private ProgressBar progressBar;
     private EditText etNama, etKelamin, etUmur, etBerat, etTinggi, etAktivitas;
     Button Result;
-    ListView listProfile;
-    List<Profile> profiles;
+  //  private ArrayList<Profile> dataProfile;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
