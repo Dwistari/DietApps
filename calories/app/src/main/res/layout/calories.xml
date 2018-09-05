@@ -16,6 +16,8 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
         android:gravity="center"
         android:orientation="vertical">
 
@@ -27,51 +29,94 @@
             android:textSize="24sp"
             android:textStyle="bold" />
 
-        <EditText
-            android:id="@+id/tvnama"
+        <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:ems="10"
-            android:hint="@string/masukan_mana"
+            android:text="Masukan Nama : "
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/etnama"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="5"
             android:inputType="textPersonName" />
 
-        <EditText
-            android:id="@+id/kelamin"
+        <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:ems="10"
-            android:hint="@string/kelamin" />
+            android:text="Jenis Kelamin"
+            android:textStyle="bold" />
 
         <EditText
-            android:id="@+id/umur"
+            android:id="@+id/etkelamin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="5"
+            android:inputType="textPersonName" />
+
+        <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:ems="10"
-            android:hint="@string/umur"
+            android:text="Umur : "
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/etumur"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="5"
             android:inputType="number" />
 
-        <EditText
-            android:id="@+id/berat"
+        <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:ems="10"
-            android:hint="@string/berat"
-            android:inputType="number"/>
+            android:text="@string/berat"
+            android:textStyle="bold" />
 
         <EditText
-            android:id="@+id/tinggi"
+            android:id="@+id/etberat"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:ems="10"
-            android:hint="@string/tinggi"
-            android:inputType="number"/>
+            android:ems="5"
+            android:inputType="number" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="5"
+            android:text="@string/tinggi"
+            android:textStyle="bold" />
 
         <EditText
-            android:id="@+id/aktivitas"
+            android:id="@+id/ettinggi"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:ems="10"
-            android:hint="@string/aktivitas" />
+            android:inputType="number" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="5"
+            android:text="@string/aktivitas"
+            android:textStyle="bold" />
+        <EditText
+            android:id="@+id/etaktivitas"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="5"
+            android:inputType="textPersonName" />
+
+        <!--<Spinner-->
+            <!--android:id="@+id/etaktivitas"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:spinnerMode="dropdown" />-->
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -85,7 +130,6 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:text="@string/result" />
-
 
 
         </LinearLayout>

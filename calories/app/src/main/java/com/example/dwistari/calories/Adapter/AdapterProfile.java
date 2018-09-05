@@ -30,6 +30,9 @@ public class AdapterProfile extends RecyclerView.Adapter<AdapterProfile.ViewHold
         context = ctx;
     }
 
+    public static void Add(Profile value) {
+    }
+
     //ViewHolder Digunakan Untuk Menyimpan Referensi Dari View-View
     class ViewHolder extends RecyclerView.ViewHolder{
 
@@ -62,9 +65,9 @@ public class AdapterProfile extends RecyclerView.Adapter<AdapterProfile.ViewHold
         //Mengambil Nilai/Value yenag terdapat pada RecyclerView berdasarkan Posisi Tertentu
         final String Nama = dataProfile.get(position).getNama();
         final String Kelamin = dataProfile.get(position).getKelamin();
-        final String Umur = dataProfile.get(position).getUmur();
-        final String Berat = dataProfile.get(position).getBerat();
-        final String Tinggi = dataProfile.get(position).getTinggi();
+        final Integer Umur = dataProfile.get(position).getUmur();
+        final Integer Berat = dataProfile.get(position).getBerat();
+        final Integer Tinggi = dataProfile.get(position).getTinggi();
         final String Aktivitas = dataProfile.get(position).getAktivitas();
 
         //Memasukan Nilai/Value kedalam View (TextView)

@@ -36,6 +36,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+     //   
         <activity android:name="com.example.dwistari.calories.CaloresiAct" />
         <!-- &lt;!&ndash;<activity android:name=".ResultAct"></activity>&ndash;&gt; -->
         <activity android:name="com.example.dwistari.calories.ProfileList" />

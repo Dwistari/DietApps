@@ -9,100 +9,100 @@ import java.io.Serializable;
      */
 @IgnoreExtraProperties
     public  class Profile implements Serializable {
-     // @SerializedName("nama")
-        private String nama;
-        private String kelamin;
-        private String umur;
-        private String berat;
-        private String tinggi;
-        private String aktivitas;
+    // @SerializedName("nama")
+    private String nama;
+    private String kelamin;
+    private Integer umur;
+    private Integer berat;
+    private Integer tinggi;
+    private String aktivitas;
 
-         public  Profile(){
+    public Profile() {
 
-         }
+    }
 
-        public Profile(String nm, String klmn, String umr, String brt, String tgg, String aktv) {
-            nama = nm;
-            kelamin = klmn;
-            umur = umr;
-            berat = brt;
-            tinggi = tgg;
-            aktivitas = aktv;
-        }
+    public Profile(String nm, String klmn, Integer umr, Integer brt, Integer tgg, String aktv) {
+        nama = nm;
+        kelamin = klmn;
+        umur = umr;
+        berat = brt;
+        tinggi = tgg;
+        aktivitas = aktv;
+    }
 
-        public String getNama() {
+    public String getNama() {
 
-            return nama;
-        }
+        return nama;
+    }
 
-        public void setNama(String nama) {
+    public void setNama(String nama) {
 
-            this.nama = nama;
-        }
+        this.nama = nama;
+    }
 
 
-        public String getKelamin() {
+    public String getKelamin() {
 
-            return kelamin;
-        }
+        return kelamin;
+    }
 
-        public void setKelamin(String kelamin) {
+    public void setKelamin(String kelamin) {
 
-            this.kelamin = kelamin;
-        }
+        this.kelamin = kelamin;
+    }
 
-        public String getUmur() {
-            return umur;
-        }
+    public Integer getUmur() {
+        return umur;
+    }
 
-//        public void setUmur(int umur) {
-        public void setUmur(String umur) {
+    public void setUmur(Integer umur) {
 
 
         this.umur = umur;
-        }
-
-        public String getBerat() {
-
-            return berat;
-        }
-
-        public void setBerat(String berat) {
-
-            this.berat = berat;
-        }
-
-        public String getTinggi() {
-
-            return tinggi;
-        }
-
-        public void setTinggi(String tinggi) {
-
-            this.tinggi = tinggi;
-        }
-
-        public String getAktivitas() {
-
-            return aktivitas;
-        }
-
-        public void setAktivitas(String aktivitas) {
-
-            this.aktivitas = aktivitas;
-        }
-    @Override
-    public String toString() {
-        return " "+nama+"\n" +
-                " "+kelamin +"\n" +
-                " "+umur +"\n" +
-                " "+berat +"\n" +
-                " "+tinggi+"\n" +
-                " "+aktivitas;
     }
 
-  //  public Profile(String nm, String klmn, String umr, String brt, String tgg, String aktv){
+    public Integer getBerat() {
 
-
-
+        return berat;
     }
+
+    public void setBerat(Integer berat) {
+
+        this.berat = berat;
+    }
+
+    public Integer getTinggi() {
+
+        return tinggi;
+    }
+
+    public void setTinggi(Integer tinggi) {
+
+        this.tinggi = tinggi;
+    }
+
+    public String getAktivitas() {
+
+        return aktivitas;
+    }
+
+    public void setAktivitas(String aktivitas) {
+
+        this.aktivitas = aktivitas;
+    }
+
+//    @Override
+//    public String toString() {
+//        return " " + nama + "\n" +
+//                " " + kelamin + "\n" +
+//                " " + umur + "\n" +
+//                " " + berat + "\n" +
+//                " " + tinggi + "\n" +
+//                " " + aktivitas;
+//    }
+
+
+    //  public Profile(String nm, String klmn, String umr, String brt, String tgg, String aktv){
+
+
+}
