@@ -30,7 +30,7 @@ public class ProfileList extends AppCompatActivity {
     private RecyclerView.LayoutManager layoutManager;
     private ArrayList<Profile> dataProfile;
     private String TAG;
-   // private String GetUserID;
+    // private String GetUserID;
 
 
     @Override
@@ -47,25 +47,6 @@ public class ProfileList extends AppCompatActivity {
         GetAktivitas = findViewById(R.id.tvaktivitas);
 
 
-        /**
-         * Inisialisasi RecyclerView & komponennya
-//         */
-//        rvView = (RecyclerView) findViewById(R.id.datalist);
-//        rvView.setHasFixedSize(true);
-//        layoutManager = new LinearLayoutManager(this);
-//        rvView.setLayoutManager(layoutManager);
-
-        /**
-         * Inisialisasi adapter dan data barang dalam bentuk ArrayList
-         * dan mengeset Adapter ke dalam RecyclerView
-         */
-//        dataProfile = new ArrayList<>();
-//        adapter = new AdapterProfile(dataProfile, ProfileList.this);
-//        rvView.setAdapter(adapter);
-
-        /**
-         * Inisialisasi dan mengambil Firebase Database Reference
-         */
 
         getDatabase = FirebaseDatabase.getInstance();
         getRefenence = getDatabase.getReference();
@@ -76,7 +57,7 @@ public class ProfileList extends AppCompatActivity {
             @Override
             public void onChildAdded(DataSnapshot dataSnapshot, String s) {
                 //Mengambil daftar item dari database, setiap kali ada turunannya
-             Profile user = dataSnapshot.getValue(Profile.class);
+                Profile user = dataSnapshot.getValue(Profile.class);
 
 
                 GetNama.setText("Nama : "+user.getNama());
@@ -111,69 +92,8 @@ public class ProfileList extends AppCompatActivity {
         });
     }
 
-//        final FirebaseDatabase database = FirebaseDatabase.getInstance();
-//        DatabaseReference ref = database.getReference("Profile");
-      //   database = FirebaseDatabase.getInstance().getReference();
-        /**
-         * Mengambil data profile dari Firebase Realtime DB
-         */
-//        database.child("Profile").addValueEventListener(new ValueEventListener() {
-//          database.addValueEventListener(new ValueEventListener() {
-//            @Override
-//            public void onDataChange(DataSnapshot dataSnapshot) {
-//                for (DataSnapshot postSnapshot : dataSnapshot.getChildren()) {
-//
-//                     AdapterProfile.Add(postSnapshot.getValue(Profile.class));
-//
-//                Profile profile = dataSnapshot.getValue(Profile.class);
-//                System.out.println(profile);
-//                }
-//            }
 
-//                /**
-//                 * Saat ada data baru, masukkan datanya ke ArrayList
-//                 */
-//                for (DataSnapshot noteDataSnapshot : dataSnapshot.getChildren()) {
-//                    /**
-//                     * Mapping data pada DataSnapshot ke dalam object Barang
-//                     * Dan juga menyimpan primary key pada object Barang
-//                     * untuk keperluan Edit dan Delete data
-//                     */
-//                    Profile profile = noteDataSnapshot.getValue(Profile.class);
-//                    profile.setNama(noteDataSnapshot.getKey());
-//
-//                    /**
-//                     * Menambahkan object Barang yang sudah dimapping
-//                     * ke dalam ArrayList
-//                     */
-//                    dataProfile.add(profile);
-//                }
-
-
-//
-//            ArrayList profile = new ArrayList(); // nomor adalah variabel
-//            private void main(String[] args) {
-//                ArrayList profile = new ArrayList();
-//                int jumlah_data = 10;
-//                profile.add(jumlah_data);
-//            }
-
-//            @Override
-//            public void onCancelled(DatabaseError databaseError) {
-//                Log.d(TAG,"LoadProfile: onCancelled", databaseError.toException());
-//
-//               // System.out.println("The read failed: " + databaseError.getCode());
-//            }
-//        });
-//    }
-//        @Override
-//        protected void onResume() {
-//            super.onResume();
-//
-//           adapter.notifyDataSetChanged();
-
-        public static Intent getActIntent (Activity activity){
-            return new Intent(activity, ProfileList.class);
-        }
+    public static Intent getActIntent (Activity activity){
+        return new Intent(activity, ProfileList.class);
     }
-
+}

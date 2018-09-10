@@ -10,5 +10,17 @@
     <string name="Pria">Pria</string>
     <string name="Wanita">Wanita</string>
 
+    <string-array name="jenis_kelamin">
+        <item> - </item>
+        <item>Pria</item>
+        <item>Wanita</item>
+    </string-array>
+
+    <string-array name="aktivitas">
+        <item> - </item>
+        <item>Ringan</item>
+        <item>Sedang</item>
+        <item>Berat</item>
+    </string-array>
 
 </resources>

@@ -12,6 +12,7 @@ import android.view.inputmethod.InputMethodManager;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ProgressBar;
+import android.widget.Spinner;
 
 import com.example.dwistari.calories.Model.Profile;
 import com.google.android.gms.tasks.OnSuccessListener;
@@ -26,9 +27,13 @@ public class CaloresiAct extends AppCompatActivity {
 
     //deklarasi variable
     private ProgressBar progressBar;
-    private EditText etNama, etKelamin, etUmur, etBerat, etTinggi, etAktivitas;
+    private EditText etNama,  etUmur, etBerat, etTinggi;
+    private Spinner etKelamin, etAktivitas;
     Button Result;
   //  private ArrayList<Profile> dataProfile;
+//
+//    String name[] ={"Pria", "Wanita"};
+//    ArrayAdapter<String> adapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -40,38 +45,28 @@ public class CaloresiAct extends AppCompatActivity {
 
         // inisialisasi fields EditText dan Button
         etNama = (EditText) findViewById(R.id.etnama);
-        etKelamin = (EditText) findViewById(R.id.etkelamin);
         etUmur = (EditText) findViewById(R.id.etumur);
         etBerat = (EditText) findViewById(R.id.etberat);
         etTinggi = (EditText) findViewById(R.id.ettinggi);
-        etAktivitas = (EditText) findViewById(R.id.etaktivitas);
+        etKelamin = (Spinner) findViewById(R.id.etkelamin);
+        etAktivitas = (Spinner) findViewById(R.id.etaktivitas);
         Result = (Button) findViewById(R.id.Result);
 
         // mengambil referensi ke Firebase Database
-      //  mFirebaseDatabase = FirebaseDatabase.getInstance();
         database = FirebaseDatabase.getInstance().getReference();
-
-
-
-//        String umur = etUmur.getText().toString();
-//        int finalUmur =Integer.parseInt(umur);
-//        String berat = etBerat.getText().toString();
-//        int finalBerat  =Integer.parseInt(berat);
-//        String tinggi = etTinggi.getText().toString();
-//        int finalTinggi =Integer.parseInt(tinggi);
 
     Result.setOnClickListener(new View.OnClickListener() {
         @Override
         public void onClick(View view) {
-            if (!isEmpty(etNama.getText().toString()) && !isEmpty(etKelamin.getText().toString()) && !isEmpty(etUmur.getText().toString())
-                    && !isEmpty(etBerat.getText().toString()) && !isEmpty(etTinggi.getText().toString())&& !isEmpty(etAktivitas.getText().toString())) {
+            if (!isEmpty(etNama.getText().toString()) && !isEmpty(etKelamin.getSelectedItem().toString()) && !isEmpty(etUmur.getText().toString())
+                    && !isEmpty(etBerat.getText().toString()) && !isEmpty(etTinggi.getText().toString())&& !isEmpty(etAktivitas.getSelectedItem().toString())) {
 
                 final int Umur = Integer.parseInt(etUmur.getText().toString());
                 final int Berat = Integer.parseInt(etBerat.getText().toString());
                 final int Tinggi = Integer.parseInt(etTinggi.getText().toString());
 //
-                submitProfile(new Profile(etNama.getText().toString(), etKelamin.getText().toString(), Umur, Berat, Tinggi,
-                        etAktivitas.getText().toString()));
+                submitProfile(new Profile(etNama.getText().toString(), etKelamin.getSelectedItem().toString(), Umur, Berat, Tinggi,
+                        etAktivitas.getSelectedItem().toString()));
 
 
                 Intent i = new Intent(CaloresiAct.this, ProfileList.class);
@@ -104,17 +99,16 @@ public class CaloresiAct extends AppCompatActivity {
             @Override
             public void onSuccess(Void aVoid) {
                     etNama.setText("");
-                    etKelamin.setText("");
+             //       etKelamin.setSelectedItem("");
                     etUmur.setText("");
                     etBerat.setText("");
                     etTinggi.setText("");
-                    etAktivitas.setText("");
+               //     etAktivitas.setSelectedItem("");
                     Snackbar.make(findViewById(R.id.Result), "Data berhasil ditambahkan", Snackbar.LENGTH_LONG).show();
 
         }
-          });
-              }
-
+              });
+         }
         public static Intent getActIntent(Activity activity) {
                 // kode untuk pengambilan Intent
                 return new Intent(activity, CaloresiAct.class);

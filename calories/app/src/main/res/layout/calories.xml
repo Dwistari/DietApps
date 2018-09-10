@@ -11,129 +11,187 @@
         style="?android:attr/progressBarStyle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_centerInParent="true" />
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="171sp" />
+
+    <TextView
+        android:layout_width="137sp"
+        android:layout_height="54sp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="106sp"
+        android:layout_marginTop="15sp"
+        android:text="Input Data"
+        android:textSize="24sp"
+        android:textStyle="bold" />
+
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="423sp"
+        android:layout_alignParentBottom="true"
         android:layout_alignParentStart="true"
-        android:layout_alignParentTop="true"
         android:gravity="center"
         android:orientation="vertical">
 
-        <TextView
-            android:layout_width="150dp"
-            android:layout_height="60dp"
-            android:text="Input Data"
-            android:textAlignment="center"
-            android:textSize="24sp"
-            android:textStyle="bold" />
 
-        <TextView
+        <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:ems="10"
-            android:text="Masukan Nama : "
-            android:textStyle="bold" />
+            android:layout_height="50sp">
 
-        <EditText
-            android:id="@+id/etnama"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:ems="5"
-            android:inputType="textPersonName" />
+            <TextView
+                android:id="@+id/name"
+                android:layout_width="150sp"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:text="@string/Nama"
+                android:textSize="18sp" />
 
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:ems="10"
-            android:text="Jenis Kelamin"
-            android:textStyle="bold" />
-
-        <EditText
-            android:id="@+id/etkelamin"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:ems="5"
-            android:inputType="textPersonName" />
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:ems="10"
-            android:text="Umur : "
-            android:textStyle="bold" />
-
-        <EditText
-            android:id="@+id/etumur"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:ems="5"
-            android:inputType="number" />
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:ems="10"
-            android:text="@string/berat"
-            android:textStyle="bold" />
-
-        <EditText
-            android:id="@+id/etberat"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:ems="5"
-            android:inputType="number" />
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:ems="5"
-            android:text="@string/tinggi"
-            android:textStyle="bold" />
-
-        <EditText
-            android:id="@+id/ettinggi"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:ems="10"
-            android:inputType="number" />
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:ems="5"
-            android:text="@string/aktivitas"
-            android:textStyle="bold" />
-        <EditText
-            android:id="@+id/etaktivitas"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:ems="5"
-            android:inputType="textPersonName" />
-
-        <!--<Spinner-->
-            <!--android:id="@+id/etaktivitas"-->
-            <!--android:layout_width="match_parent"-->
-            <!--android:layout_height="wrap_content"-->
-            <!--android:spinnerMode="dropdown" />-->
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
-            android:orientation="horizontal">
-
-            <Button
-                android:id="@+id/Result"
+            <EditText
+                android:id="@+id/etnama"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="@string/result" />
+                android:ems="5"
+                android:layout_toEndOf="@+id/name"
+                android:inputType="textPersonName" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="50sp">
+
+            <TextView
+                android:id="@+id/klmin"
+                android:layout_width="150sp"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:ems="10"
+                android:textSize="18sp"
+                android:text="@string/kelamin" />
+
+            <Spinner
+                android:id="@+id/etkelamin"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toEndOf="@+id/klmin"
+                android:entries="@array/jenis_kelamin"
+                android:spinnerMode="dropdown" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="50sp">
+
+            <TextView
+                android:id="@+id/umur"
+                android:layout_width="150sp"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:ems="10"
+                android:textSize="18sp"
+                android:text="@string/umur"/>
+
+            <EditText
+                android:id="@+id/etumur"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="5"
+                android:layout_toEndOf="@+id/umur"
+                android:inputType="number" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="40sp">
+
+            <TextView
+                android:id="@+id/brt"
+                android:layout_width="150sp"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:ems="10"
+                android:text="@string/berat"
+                android:textSize="18sp" />
+
+            <EditText
+                android:id="@+id/etberat"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="5"
+                android:layout_toEndOf="@+id/brt"
+                android:inputType="number" />
+
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="50sp">
+
+            <TextView
+                android:id="@+id/tingg"
+                android:layout_width="150sp"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:ems="5"
+                android:textSize="18sp"
+                android:text="@string/tinggi" />
+
+            <EditText
+                android:id="@+id/ettinggi"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="5"
+                android:textSize="18sp"
+                android:layout_toEndOf="@+id/tingg"
+                android:inputType="number" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="50sp">
+
+            <TextView
+                android:id="@+id/aktv"
+                android:layout_width="150sp"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:ems="5"
+                android:textSize="18sp"
+                android:text="@string/aktivitas"/>
+
+            <Spinner
+                android:id="@+id/etaktivitas"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toEndOf="@+id/aktv"
+                android:entries="@array/aktivitas"
+                android:spinnerMode="dropdown" />
+
+        </RelativeLayout>
+
+        <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8sp"
+        android:orientation="horizontal">
+
+        <Button
+        android:id="@+id/Result"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:text="@string/result" />
 
 
         </LinearLayout>
-
     </LinearLayout>
 
 </RelativeLayout>
